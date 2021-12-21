@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script src="bundle.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Crud</h1>
+                <form id="send">
+                    <h2>Send ether</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="receiver-address">Receiver address</label>
+                        <input id="receiver-address" class="form-control"></input>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input id="amount" type="number" class="form-control"></input>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <form id="deposit">
+                    <h2>Deposit</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input id="amount-deposit" type="number" class="form-control"></input>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <p id="balance">
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
