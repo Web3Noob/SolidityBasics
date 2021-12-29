@@ -1,0 +1,25 @@
+{
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "start": "concurrently \"npm run ganache\" \"npm run migrate\"",
+        "migrate": "truffle migrate --reset --compile-all --network development",
+        "ganache": "ganache-cli --networkId %npm_package_config_ganache_networkId% --allowUnlimitedContractSize --gasLimit %npm_package_config_ganache_gasLimit% --gasPrice %npm_package_config_ganache_gasPrice% --mnemonic %npm_package_config_ganache_mnemonic%"
+    },
+    "config": {
+        "ganache": {
+            "mnemonic": "cause dry tilt taste hamster document hen over acoustic explain game distance",
+            "networkId": 3431,
+            "gasPrice": 25000000000,
+            "gasLimit": 6500000
+        }
+    },
+    "devDependencies": {
+        "concurrently": "^6.5.1",
+        "webpack-cli": "^4.9.1"
+    },
+    "dependencies": {
+        "node-polyfill-webpack-plugin": "^1.1.4",
+        "web3": "^1.6.1",
+        "webpack": "^5.65.0"
+    }
+}
